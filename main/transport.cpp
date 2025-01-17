@@ -45,6 +45,7 @@ void transport::task_int() {
         .event = app::EVENT_OUTPUT,
         .size = 0
     };
+    usb_serial_jtag_ll_txfifo_flush();
 
     while (true) {
 #if defined(CONFIG_NCP_BUS_MODE_UART)
